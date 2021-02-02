@@ -1,0 +1,16 @@
+extends ../extends/_layout.pug
+
+block append config
+  - var subTitle = 'Contact'
+  - var Description = 'このページの概要を記述する'
+  - var Keywords = 'このページのキーワードを記述する'
+  - var currentUrl = 'contact.html'
+
+block append links
+  link(rel="stylesheet", href=cssPath+"main.min.css")
+
+block content
+  div.wrapper
+    h1 #{mainTitle}
+    h2 #{subTitle}
+    p: a(href="/index.html") back top page
