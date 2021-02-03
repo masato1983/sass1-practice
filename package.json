@@ -43,8 +43,13 @@
     "gulp-rev-rewrite": "^4.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.0.2",
-    "node-sass": "^5.0.0"
+    "node-sass": "^5.0.0",
+    "stylelint": "^13.9.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   }
 }
