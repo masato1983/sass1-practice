@@ -64,7 +64,7 @@ function sassTask() {
       if (!path.extname.endsWith('.map')) {
         path.basename += '.min'
       }}))
-    .pipe(rev())
+    .pipe(gulpif(isProd, rev()))
     .pipe(dest('./dist/css'))
     .pipe(rev.manifest({
       merge: true
@@ -85,7 +85,7 @@ function jsTask() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(rev())
+    .pipe(gulpif(isProd, rev()))
     .pipe(dest('./dist/js'))
     .pipe(rev.manifest({
       merge: true
