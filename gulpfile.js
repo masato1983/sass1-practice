@@ -2,6 +2,7 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
+const stylelint = require('gulp-stylelint')
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
@@ -54,10 +55,13 @@ function sassTask() {
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(autoprefixer())
-    .pipe(sass())
-    .pipe(gulpif(!isProd, cleancss({
-      format: 'beautify'
-    })))
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(stylelint({
+      reporters: [
+        {formatter: 'verbose', console: true}
+      ],
+      // fix: true
+    }))
     .pipe(gulpif(isProd, cleancss()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(rename(function(path) {
