@@ -22,6 +22,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@linthtml/gulp-linthtml": "^0.6.0",
+    "@linthtml/linthtml": "^0.6.0",
     "browser-sync": "^2.26.14",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
