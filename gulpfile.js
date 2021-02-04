@@ -38,10 +38,7 @@ function pugTask() {
   return src([filesPath.pug, '!./src/templates/includes/*.pug', '!./src/templates/extends/*.pug'])
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(pug())
-    .pipe(gulpif(!isProd, prettify({
-      indent_size: 2,
-      indent_with_tabs: true
-    })))
+    .pipe(gulpif(!isProd, prettify()))
     .pipe(gulpif(isProd, htmlmin({
       collapseWhitespace: true
     })))
