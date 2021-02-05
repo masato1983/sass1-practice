@@ -1,0 +1,14 @@
+.btn {
+  border-radius: 5px;
+  display: block;
+  height: 40px;
+  width: 80px;
+
+  &.red {
+    background: red;
+  }
+
+  &.green {
+    background: green;
+  }
+}
