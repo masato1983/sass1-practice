@@ -1,0 +1,14 @@
+div.border-box {
+  border: {
+
+    bottom: {
+      color: #f00;
+      style: dotted;
+      width: 5px;
+    }
+
+    radius: 5px;
+
+    top: 2px solid #000;
+  }
+}
