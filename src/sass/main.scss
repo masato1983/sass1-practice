@@ -20,3 +20,15 @@ a {
     text-decoration: underline;
   }
 }
+
+.block {
+  width: 500px;
+
+  &__element {
+    margin-bottom: 20px;
+
+    &--modifier {
+      background: #f00;
+    }
+  }
+}
