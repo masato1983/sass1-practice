@@ -1,0 +1,9 @@
+.block {
+  .element1 {
+    width: 800px;
+  }
+
+  @at-root .element2 {
+    width: 1000px;
+  }
+}
