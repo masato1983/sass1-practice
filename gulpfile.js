@@ -24,6 +24,7 @@ const { readFileSync } = require('fs');
 const gulpif = require('gulp-if');
 const isProd = process.env.NODE_ENV === "production";
 
+sass.compiler = require('sass');
 
 filesPath = {
   sass: './src/sass/**/*.scss',
