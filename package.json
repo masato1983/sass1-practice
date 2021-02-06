@@ -27,6 +27,7 @@
     "browser-sync": "^2.26.14",
     "cross-env": "^7.0.3",
     "del": "^6.0.0",
+    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
