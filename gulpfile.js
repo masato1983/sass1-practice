@@ -53,8 +53,8 @@ function sassTask() {
   return src([filesPath.sass, '!./src/sass/widget.scss'])
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(gulpif(!isProd, sourcemaps.init()))
-    .pipe(autoprefixer())
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
+    .pipe(autoprefixer())
     .pipe(stylelint({
       reporters: [
         {formatter: 'verbose', console: true}
