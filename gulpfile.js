@@ -1,5 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass');
+const Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const stylelint = require('gulp-stylelint')
@@ -53,7 +54,7 @@ function sassTask() {
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(autoprefixer())
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
     .pipe(stylelint({
       reporters: [
         {formatter: 'verbose', console: true}
