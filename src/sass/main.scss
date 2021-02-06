@@ -10,8 +10,8 @@
   @media screen and (max-width: 768px) {
     width: 100%;
 
-    @at-root .item {
-      margin-bottom: 30px;
+    @at-root (with: rule) {
+      margin-bottom: 35px;
     }
   }
 }
