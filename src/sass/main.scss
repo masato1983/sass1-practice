@@ -1,0 +1,10 @@
+@mixin paddingBox ($value) {
+  margin-bottom: $value * 2;
+  padding: $value;
+}
+
+#main {
+  .mainBox {
+    @include paddingBox(10px);
+  }
+}
