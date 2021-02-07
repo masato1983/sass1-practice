@@ -1,0 +1,23 @@
+$calcWidht: 1000px;
+
+.calc1 {
+  width: 500px + 8;
+}
+
+.calc2 {
+  width: 500px - 8;
+}
+
+.calc3 {
+  width: 500px * 8;
+}
+
+.calc4 {
+  font-size: 5px * 5 / 2;
+  height: $calcWidht / 8;
+  width: (500px / 8);
+}
+
+.calc5 {
+  width: 500px % 8; // 余り
+}
