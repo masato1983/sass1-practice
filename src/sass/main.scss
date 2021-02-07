@@ -1,0 +1,8 @@
+@mixin font ($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+
+.main {
+  @include font (#f00, 10px);
+}
