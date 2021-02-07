@@ -1,8 +1,22 @@
-@mixin font ($color, $size) {
+@mixin font ($color: #0f0, $size: 8px) {
   color: $color;
   font-size: $size;
 }
 
 .main {
   @include font (#f00, 10px);
+}
+
+.side {
+  @include font ();
+}
+
+// 第一引数のみ渡す
+.first {
+  @include font ($color: #00f);
+}
+
+// 第二引数のみ渡す
+.secont {
+  @include font ($size: 20px);
 }
