@@ -1,0 +1,13 @@
+@mixin roundBox {
+  background: #cdcdcd;
+  border: 1px solid #666;
+  border-radius: 10px;
+}
+
+.sideArea {
+  @include roundBox;
+}
+
+.bottomArea {
+  @include roundBox;
+}
