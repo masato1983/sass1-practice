@@ -1,0 +1,17 @@
+$margin-bottom: 30px;
+
+section {
+  $value: 100px;
+
+  margin-bottom: $margin-bottom;
+
+  p {
+    padding: $value;
+  }
+}
+
+footer {
+  $value: 50px;
+
+  padding: $value;
+}
