@@ -1,0 +1,20 @@
+@mixin shadow ($value...) {
+  text-shadow: $value;
+}
+
+.mainText {
+  @include shadow(8px 8px 0 #666, 10px -10px 0 #999);
+}
+
+@mixin box ($w: 300px, $pd: 20px, $mg: 40px, $clr: #f00) {
+  color: $clr;
+  margin: $mg;
+  padding: $pd;
+  width: $w;
+}
+
+$value: 200px, 40px;
+
+.main {
+  @include box($value...);
+}
