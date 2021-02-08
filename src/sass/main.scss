@@ -1,0 +1,10 @@
+$IMG_PATH: "../img/";
+$SELECTOR: '.box, .item';
+
+.box {
+  background-image: url(#{$IMG_PATH}bg.png);
+}
+
+#{$SELECTOR} {
+  background-image: url(#{$IMG_PATH}bg.png);
+}
