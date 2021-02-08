@@ -12,3 +12,9 @@ $SELECTOR: '.box, .item';
   background-image: url(#{$IMG_PATH}bg.png);
   line-height: #{$height} / #{$line-count};
 }
+
+@for $i from 0 to 2 {
+  .mt#{$i * 5} {
+    margin-top: 5px * $i;
+  }
+}
