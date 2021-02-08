@@ -6,5 +6,9 @@ $SELECTOR: '.box, .item';
 }
 
 #{$SELECTOR} {
+  $height: 100px;
+  $line-count: 10;
+
   background-image: url(#{$IMG_PATH}bg.png);
+  line-height: #{$height} / #{$line-count};
 }
