@@ -7,6 +7,7 @@
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
+    "scss/map-keys-quotes": "always",
     "scss/selector-no-redundant-nesting-selector": true,
     "order/properties-alphabetical-order": true
   }
