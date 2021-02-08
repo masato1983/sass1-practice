@@ -1,0 +1,38 @@
+// Number型 (数値)
+$number1: 100;
+$number2: 0.8;
+$number3: 15px;
+$number4: 1.2em;
+$number5: 90%;
+
+// Color型 (色)
+$color1: red;
+$color2: #f00;
+$color3: rgb(255, 0, 0, 1);
+
+// String型 (文字列)
+$string1: "foo";
+$string2: 'bar';
+$string3: fiz;
+$stirng4: auto;
+$stirng5: sans-serif;
+
+// Boolean型 (真偽)
+$boolean1: true;
+$boolean2: false;
+
+// List型 (配列)
+$list1: 1px 10px 15px;
+$list2: helvetica, arial, sans-serif;
+$list3: (dog, cat);
+$list4: [dog, cat];
+
+// Map型 (連想配列)
+$color: (
+  "text": #333,
+  "border": #666,
+  "bg": #ededed
+);
+
+// Function型 (関数)
+get-function("rgb");
