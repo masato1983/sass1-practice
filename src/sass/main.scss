@@ -18,3 +18,9 @@ $SELECTOR: '.box, .item';
     margin-top: 5px * $i;
   }
 }
+
+$text: "CSS";
+
+.text {
+  content: "#{$text} and Sass";
+}
