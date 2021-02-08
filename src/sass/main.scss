@@ -1,14 +1,16 @@
-@mixin media {
-  @media only screen and (max-width: 768px) {
+@mixin media ($width-media: 768px) {
+  @media only screen and (max-width: $width-media) {
     @content;
   }
 }
+
+$sp-width: 800px;
 
 .item {
   .image {
     float: left;
 
-    @include media {
+    @include media ($sp-width) {
       float: none;
     }
   }
@@ -16,7 +18,7 @@
   .text {
     margin-left: 20px;
 
-    @include media {
+    @include media ($sp-width) {
       margin-left: 0;
     }
   }
