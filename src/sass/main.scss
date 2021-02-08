@@ -1,0 +1,23 @@
+@mixin media {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.item {
+  .image {
+    float: left;
+
+    @include media {
+      float: none;
+    }
+  }
+
+  .text {
+    margin-left: 20px;
+
+    @include media {
+      margin-left: 0;
+    }
+  }
+}
