@@ -1,0 +1,14 @@
+.text-red {
+  color: #f00;
+}
+
+.borderBox {
+  border: 1px solid #666;
+}
+
+.item {
+  padding: 10px;
+
+  @extend .text-red;
+  @extend .borderBox;
+}
