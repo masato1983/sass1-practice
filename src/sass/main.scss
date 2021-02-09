@@ -1,0 +1,11 @@
+@for $i from 1 through 3 {
+  .mt#{$i} {
+    margin-top: $i * 10;
+  }
+}
+
+@for $i from 1 to 3 {
+  .mb#{$i} {
+    margin-bottom: $i * 10;
+  }
+}
