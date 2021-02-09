@@ -11,3 +11,12 @@
     margin-bottom: $i * 10;
   }
 }
+
+$i: 0;
+
+@while $i < 30 {
+  .pb#{$i} {
+    padding-bottom: $i * 10;
+  }
+  $i: $i + 10;
+}
