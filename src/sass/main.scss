@@ -1,0 +1,18 @@
+$width: 300px;
+$height: 100px;
+
+.item1 {
+  $height: 20%;
+  $width: 33% !default;
+
+  height: $height;
+  width: $width;
+}
+
+.item2 {
+  $height: 50% !default;
+  $width: 200px;
+
+  height: $height;
+  width: $width;
+}
