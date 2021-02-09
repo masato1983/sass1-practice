@@ -7,3 +7,15 @@
     border: none;
   }
 }
+
+.box0 {
+  @include box(0);
+}
+
+.box1 {
+  @include box(1);
+}
+
+.box2 {
+  @include box(2);
+}
