@@ -19,3 +19,22 @@
 .box2 {
   @include box(2);
 }
+
+$A: 10;
+$B: 20;
+
+.example1 {
+  @if $A == $B {
+    content: "AはBと同じ";
+  } @else if $A > $B {
+    content: "AはBより大きい";
+  } @else if $A < $B {
+    content: "AはBより小さい";
+  } @else if $A >= $B {
+    content: "AはB以上";
+  } @else if $A <= $B {
+    content: "AはB以下";
+  } @else if $A != $B {
+    content: "AとBは等しくない";
+  }
+}
