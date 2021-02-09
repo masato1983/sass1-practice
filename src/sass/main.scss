@@ -1,0 +1,9 @@
+@mixin box($type) {
+  @if $type == 0 {
+    border: 1px solid #333;
+  } @else if $type == 1 {
+    border: 1px solid #f00;
+  } @else {
+    border: none;
+  }
+}
