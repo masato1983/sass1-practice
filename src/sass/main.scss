@@ -20,3 +20,17 @@ $i: 0;
   }
   $i: $i + 10;
 }
+
+$icons: top, qa, contact;
+
+@each $icon in $icons {
+  .icon1-#{$icon} {
+    background: url("../img/#{$icon}.png");
+  }
+}
+
+@each $icon in $icons {
+  .icon2-#{$icon} {
+    background: url("../img/" + $icon + ".png");
+  }
+}
