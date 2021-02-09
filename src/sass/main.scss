@@ -20,8 +20,8 @@
   @include box(2);
 }
 
-$A: 10;
-$B: 20;
+$A: 30;
+$B: 25;
 
 .example1 {
   @if $A == $B {
@@ -36,5 +36,15 @@ $B: 20;
     content: "AはB以下";
   } @else if $A != $B {
     content: "AとBは等しくない";
+  }
+}
+
+.example2 {
+  @if $A > 10 and $B < 20 {
+    content: "and : かつ";
+  } @else if $B == 10 or $B ==20 {
+    content: 'or : または';
+  } @else if not ($A == $B) {
+    content: "not : 否定";
   }
 }
