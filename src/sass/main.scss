@@ -1,11 +1,13 @@
 @for $i from 1 through 3 {
-  .mt#{$i} {
+  $index: $i * 10;
+  .mt#{$index} {
     margin-top: $i * 10;
   }
 }
 
 @for $i from 1 to 3 {
-  .mb#{$i} {
+  $index: $i * 10;
+  .mb#{$index} {
     margin-bottom: $i * 10;
   }
 }
