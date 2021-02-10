@@ -5,3 +5,17 @@
 .unquote {
   content: unquote($string: "test");
 }
+
+.abs {
+  width: 100px - 200px;
+  width: abs($number: 100px - 200px);
+}
+
+.ceil {
+  width: (100px / 3);
+  width: ceil($number: 100px / 3);
+}
+
+.floor {
+  width: floor($number: 100px / 3);
+}
