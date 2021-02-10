@@ -1,0 +1,10 @@
+@mixin ht ($value) {
+  height: $value;
+}
+
+.box {
+  @include ht(100px / 3);
+
+  width: (100px / 3);
+  width: round(100px / 3);
+}
