@@ -8,7 +8,7 @@
     "at-rule-empty-line-before": [
       "always",
       {
-        "ignoreAtRules": ["else", "if", "include", "return"]
+        "ignoreAtRules": ["else", "if", "include", "return", "warn"]
       }
     ],
     "block-closing-brace-newline-after": [
