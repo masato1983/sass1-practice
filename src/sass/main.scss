@@ -12,6 +12,8 @@
 
   @each $value in $values {
     $sum: $sum + $value;
+
+    @debug $sum;
   }
 
   @return round($sum / length($values));
