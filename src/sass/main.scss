@@ -1,0 +1,18 @@
+$list1: pen, apple, pinepple;
+$list2: banana, pen;
+
+.length {
+  z-index: length($list: $list1);
+}
+
+.nth {
+  content: nth($list: $list1, $n: 2);
+}
+
+.join {
+  content: join($list1: $list1, $list2: $list2, $separator: comma);
+}
+
+.append {
+  content: append($list1, apple, $separator: comma);
+}
