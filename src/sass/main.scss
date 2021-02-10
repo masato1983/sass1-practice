@@ -1,0 +1,7 @@
+.quote {
+  content: quote($string: test);
+}
+
+.unquote {
+  content: unquote($string: "test");
+}
