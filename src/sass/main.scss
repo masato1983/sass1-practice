@@ -16,3 +16,13 @@ $list2: banana, pen;
 .append {
   content: append($list1, apple, $separator: comma);
 }
+
+$map: (
+  "bgcolor": #ededed,
+  "fontcolor": #f00,
+  "bdcolor": #000
+);
+
+.mapget {
+  color: map-get($map: $map, $key: fontcolor);
+}
