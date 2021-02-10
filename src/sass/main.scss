@@ -3,7 +3,7 @@
   @if type-of($value1) == number {
     $result: $value1 + $value2;
   } @else {
-    @warn "#{$value1}は数値ではありません";
+    @error "#{$value1}は数値ではありません";
   }
   @return $result;
 }
