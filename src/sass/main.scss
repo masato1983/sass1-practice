@@ -1,3 +1,15 @@
 .rgba {
   color: rgba($color: #98ab8e, $alpha: 0.3);
 }
+
+.mix {
+  color: mix($color1: #f70000, $color2: #0000e2, $weight: 50%);
+}
+
+.lighten {
+  color: lighten($color: #279841, $amount: 30%);
+}
+
+.darken {
+  color: darken($color: #279841, $amount: 20%);
+}
