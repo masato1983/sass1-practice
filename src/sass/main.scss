@@ -1,9 +1,15 @@
 @function sum($value1: 10px, $value2: 20px) {
-  @return $value1 + $value2;
+  $result: 0;
+  @if type-of($value1) == number {
+    $result: $value1 + $value2;
+  } @else {
+    @warn "#{$value1}は数値ではありません";
+  }
+  @return $result;
 }
 
 .sum {
-  width: sum(100px, 200px);
+  width: sum("100px", 200px);
   width: sum();
 }
 
