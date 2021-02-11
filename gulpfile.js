@@ -4,6 +4,8 @@ const Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const stylelint = require('gulp-stylelint')
+const postcss = require('gulp-postcss')
+const sortMediaQueries = require('postcss-sort-media-queries')
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
@@ -55,6 +57,11 @@ function sassTask() {
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
     .pipe(autoprefixer())
+    .pipe(postcss([
+      sortMediaQueries({
+        sort: 'mobile-first'
+      })
+    ]))
     .pipe(stylelint({
       reporters: [
         {formatter: 'verbose', console: true}
