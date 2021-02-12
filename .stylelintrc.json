@@ -4,6 +4,7 @@
     "stylelint-scss",
     "stylelint-order"
   ],
+  "ignoreFiles": ["**/*.js"],
   "rules": {
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
