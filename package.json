@@ -54,6 +54,7 @@
     "node-sass": "^5.0.0",
     "postcss": "^8.2.6",
     "postcss-sort-media-queries": "^3.3.3",
+    "pug-lint": "^2.6.0",
     "sass": "^1.32.6",
     "stylelint": "^13.9.0",
     "stylelint-config-sass-guidelines": "^7.1.0",
