@@ -4,8 +4,8 @@ const Fiber = require('fibers');
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const stylelint = require('gulp-stylelint')
-const postcss = require('gulp-postcss')
-const sortMediaQueries = require('postcss-sort-media-queries')
+const postcss = require('gulp-postcss');
+const sortMediaQueries = require('postcss-sort-media-queries');
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
@@ -13,6 +13,7 @@ const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const pug = require('gulp-pug');
+const pugLinter = require('gulp-pug-linter');
 const prettify = require('gulp-prettify');
 const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
@@ -41,6 +42,7 @@ filesPath = {
 function pugTask() {
   return src([filesPath.pug, '!./src/templates/includes/*.pug', '!./src/templates/extends/*.pug'])
     .pipe(plumber({errorHandler: notifier.error}))
+    .pipe(pugLinter({ reporter: 'puglint-stylish' }))
     .pipe(pug())
     .pipe(gulpif(!isProd, prettify()))
     .pipe(gulpif(isProd, htmlmin({
