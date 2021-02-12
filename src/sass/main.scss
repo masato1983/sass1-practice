@@ -1,3 +1,9 @@
-h1 {
-  color: #ff0;
+$error: #f00;
+
+.error-class {
+  color: $error;
+}
+
+.title {
+  color: #0f0;
 }
