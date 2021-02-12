@@ -85,7 +85,7 @@ function sassTask() {
 // Javascript
 
 function jsTask() {
-  return src(['./src/js/project.js', './src/js/alert.js'])
+  return src(['./src/js/project.js', './src/js/alert.js', './src/js/jquery-3.5.1.min.js'])
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(concat({path: 'project.js', cwd: ''}))
     .pipe(babel({
