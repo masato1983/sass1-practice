@@ -10,13 +10,13 @@ html(lang='ja')
     script(src='/js/jquery-3.5.1.min.js')
     script.
       var isOpen = false;
-      function clickNavi() {
+      function clickNav() {
       if (window.innerWidth < 767) {
       if (isOpen) {
-      $(".g_navi").removeClass("show");
+      $(".g_nav").removeClass("show");
       isOpen = false;
       } else {
-      $(".g_navi").addClass("show");
+      $(".g_nav").addClass("show");
       isOpen = true;
       }
       }
@@ -26,8 +26,8 @@ html(lang='ja')
       header.header
         h1.title フロントエンドエンジニアのための「Sass」講座
         h2.sub_title 〜基礎から実践まで〜
-      nav.g_navi
-        ul(onclick='clickNavi()')
+      nav.g_nav
+        ul(onclick='clickNav()')
           li
             a(href='/pages/about.html') 概要です
           li
