@@ -70,7 +70,7 @@ function sassTask() {
       reporters: [
         {formatter: 'verbose', console: true}
       ],
-      // fix: true
+      fix: true
     }))
     .pipe(gulpif(isProd, cleancss()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
