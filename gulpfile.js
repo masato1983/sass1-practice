@@ -16,7 +16,7 @@ const pug = require('gulp-pug');
 const pugLinter = require('gulp-pug-linter');
 const prettify = require('gulp-prettify');
 const htmlmin = require('gulp-htmlmin');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('autoprefixer');
 const babel = require('gulp-babel');
 const zip = require('gulp-zip');
 const del = require('del');
@@ -58,8 +58,8 @@ function sassTask() {
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
-    .pipe(autoprefixer())
     .pipe(postcss([
+      autoprefixer(),
       sortMediaQueries({
         sort: 'mobile-first'
       })
