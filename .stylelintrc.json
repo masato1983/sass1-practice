@@ -78,6 +78,7 @@
     "scss/no-duplicate-dollar-variables": true,
     "scss/no-duplicate-mixins": true,
     "scss/no-global-function-names": true,
+    "order/properties-alphabetical-order": null,
     "value-no-vendor-prefix": null
   }
 }
