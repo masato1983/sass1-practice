@@ -5,6 +5,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync');
 const stylelint = require('gulp-stylelint')
 const postcss = require('gulp-postcss');
+const cssDeclarationSorter = require('css-declaration-sorter');
 const sortMediaQueries = require('postcss-sort-media-queries');
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
@@ -60,6 +61,7 @@ function sassTask() {
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
     .pipe(postcss([
       autoprefixer(),
+      cssDeclarationSorter({order: 'smacss'}),
       sortMediaQueries({
         sort: 'mobile-first'
       })
@@ -68,7 +70,7 @@ function sassTask() {
       reporters: [
         {formatter: 'verbose', console: true}
       ],
-      fix: true
+      // fix: true
     }))
     .pipe(gulpif(isProd, cleancss()))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
