@@ -4,7 +4,11 @@
     "Udemy",
     "cleancss",
     "densitydpi",
+    "flexbox",
+    "gulpfile",
     "gulpif",
-    "puglint"
+    "linthtml",
+    "puglint",
+    "stylelint"
   ]
 }
