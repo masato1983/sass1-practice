@@ -3,9 +3,9 @@ h1 {
 }
 
 .flex-box {
-  background-color: #ccc;
-  border-radius: 2px;
   display: flex;
-  height: 120px;
   width: 200px;
+  height: 120px;
+  border-radius: 2px;
+  background-color: #ccc;
 }
