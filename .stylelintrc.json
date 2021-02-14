@@ -73,7 +73,7 @@
     "scss/operator-no-newline-before": true,
     "scss/operator-no-unspaced": true,
     "scss/partial-no-import": true,
-    "scss/selector-nest-combinators": "always",
+    "scss/selector-nest-combinators": null,
     "scss/selector-no-redundant-nesting-selector": true,
     "scss/no-duplicate-dollar-variables": true,
     "scss/no-duplicate-mixins": true,
