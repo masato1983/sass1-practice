@@ -55,7 +55,7 @@ function pugTask() {
 // Sass
 
 function sassTask() {
-  return src([filesPath.sass, '!./src/sass/widget.scss'])
+  return src([filesPath.sass])
     .pipe(plumber({errorHandler: notifier.error}))
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
@@ -140,7 +140,7 @@ function serve() {
       index: 'index.html'
     },
     browser: 'google chrome',
-    reloadDelay: 1000
+    reloadDelay: 3000
   })
   watch([filesPath.pug, filesPath.sass, filesPath.js, filesPath.images], series(clean, pugTask, sassTask, jsTask, imagesTask, revRewrite)).on('change', browserSync.reload)
 }
