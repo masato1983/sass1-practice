@@ -139,7 +139,7 @@ function serve() {
       baseDir: './dist',
       index: 'index.html'
     },
-    browser: 'google chrome',
+    browser: ['google chrome', 'firefox'],
     reloadDelay: 3000
   })
   watch([filesPath.pug, filesPath.sass, filesPath.js, filesPath.images], series(clean, pugTask, sassTask, jsTask, imagesTask, revRewrite)).on('change', browserSync.reload)
