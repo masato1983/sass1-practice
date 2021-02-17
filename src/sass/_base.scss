@@ -1,3 +1,6 @@
+@use 'variables' as var;
+@use 'sass:map';
+
 * {
   margin: 0;
   padding: 0;
@@ -22,32 +25,34 @@ li {
   list-style: none;
 }
 
-.header {
+.site-header {
   width: 100%;
   height: 200px;
+  background: url('#{map.get(var.$path, img)}/header_001.jpg') no-repeat center top;
+  background-size: cover;
 }
 
-.g-nav {
+.inline-list {
   width: 100%;
-  height: 60px;
+  height: var.$g-nav-height;
   border-bottom: 1px solid #eee;
 
   ul {
-    width: 600px;
+    width: var.$g-nav-button-width * 4;
     margin: 0 auto;
     overflow: hidden;
   }
 }
 
-.g-nav-list {
-  width: 150px;
-  height: 60px;
+.inline-list-list {
+  width: var.$g-nav-button-width;
+  height: var.$g-nav-height;
   float: left;
   text-align: center;
 }
 
 
-.g-nav-list-link {
+.inline-list-list-link {
   display: block;
   line-height: 2;
 
@@ -57,11 +62,24 @@ li {
 }
 
 .contents {
-  width: 1024px;
+  width: map.get(var.$width, contents);
   margin: 0 auto;
+  overflow: hidden;
+
+  .main-area {
+    width: map.get(var.$width, contents) - map.get(var.$width, side-area) - var.$area-padding * 2;
+    padding: var.$area-padding;
+    float: left;
+  }
+
+  .side-area {
+    width: map.get(var.$width, side-area) - var.$area-padding * 2;
+    padding: var.$area-padding;
+    float: right;
+  }
 }
 
-.footer {
+.site-footer {
   width: 100%;
   padding: 20px;
   text-align: center;

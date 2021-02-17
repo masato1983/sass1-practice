@@ -13,29 +13,29 @@ html(lang='ja')
       function clickNav() {
       if (window.innerWidth < 767) {
       if (isOpen) {
-      $(".g-nav").removeClass("show");
+      $(".inline-list").removeClass("show");
       isOpen = false;
       } else {
-      $(".g-nav").addClass("show");
+      $(".inline-list").addClass("show");
       isOpen = true;
       }
       }
       }
   body#top
     .wrap
-      header.header
+      header.site-header
         h1.title フロントエンドエンジニアのための「Sass」講座
         h2.sub-title 〜基礎から実践まで〜
-      nav.g-nav
+      nav.inline-list(data-ui-component='site-nav')
         ul(onclick='clickNav()')
-          li.g-nav-list
-            a.g-nav-list-link(href='/pages/about.html') 概要です
-          li.g-nav-list
-            a.g-nav-list-link(href='/pages/about.html') カリキュラム
-          li.g-nav-list
-            a.g-nav-list-link(href='/pages/about.html') Q&Aです
-          li.g-nav-list
-            a.g-nav-list-link(href='/pages/about.html') お知らせ
+          li.inline-list-list
+            a.inline-list-list-link(href='/pages/about.html') 概要です
+          li.inline-list-list
+            a.inline-list-list-link(href='/pages/about.html') カリキュラム
+          li.inline-list-list
+            a.inline-list-list-link(href='/pages/about.html') Q&Aです
+          li.inline-list-list
+            a.inline-list-list-link(href='/pages/about.html') お知らせ
       .contents
         main.main-area
           section.main-area-section
@@ -87,4 +87,4 @@ html(lang='ja')
                 a(href='/pages/about.html') ミックスイン
               li
                 a(href='/pages/about.html') 継承です
-      footer.footer © 2017 Aire Project
+      footer.site-footer © 2017 Aire Project
