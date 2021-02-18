@@ -24,4 +24,15 @@
   .left-thumb-para {
     margin-left: 170px;
   }
+
+  .read-more {
+    @include mixins.link-arrow('left', #333);
+
+    padding: 5px 10px;
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #f2f2f2;
+    text-align: right;
+  }
 }

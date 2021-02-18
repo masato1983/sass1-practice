@@ -10,20 +10,37 @@
   text-shadow: 1px 1px 2px rgba($color, $alpha);
 }
 
-@mixin link-arrow {
+@mixin link-arrow($side: 'right', $color: #aaa) {
+
+  @if $side != 'right' and $side != 'left' {
+    @warn '引数は「right」か「left」です。';
+  }
+
   position: relative;
+
+  @if $side == 'right' {
+    padding-right: 20px;
+  } @else if $side == 'left' {
+    padding-left: 20px;
+  }
 
   &::after {
     content: '';
     display: block;
     position: absolute;
     top: 50%;
-    right: 10px;
+
+    @if $side == 'right' {
+      right: 10px;
+    } @else if $side == 'left' {
+      left: 10px;
+    }
+
     width: 5px;
     height: 5px;
     margin-top: -2.5px;
     transform: rotate(45deg);
-    border-top: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+    border-top: 1px solid $color;
+    border-right: 1px solid $color;
   }
 }
