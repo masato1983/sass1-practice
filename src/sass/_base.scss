@@ -1,4 +1,5 @@
 @use 'variables' as var;
+@use 'mixins';
 @use 'sass:map';
 
 * {
@@ -30,6 +31,20 @@ li {
   height: 200px;
   background: url('#{map.get(var.$path, img)}/header_001.jpg') no-repeat center top;
   background-size: cover;
+
+  .title {
+    @include mixins.text-shadow(#fff, 1);
+
+    width: map.get(var.$width, contents);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .sub-title {
+    @extend .title;
+
+    font-size: 1.2rem;
+  }
 }
 
 .inline-list {
@@ -65,18 +80,38 @@ li {
   width: map.get(var.$width, contents);
   margin: 0 auto;
   overflow: hidden;
+}
 
-  .main-area {
-    width: map.get(var.$width, contents) - map.get(var.$width, side-area) - var.$area-padding * 2;
-    padding: var.$area-padding;
-    float: left;
+.main-area {
+  width: map.get(var.$width, contents) - map.get(var.$width, side-area) - var.$area-padding * 2;
+  padding: var.$area-padding;
+  float: left;
+}
+
+.side-area {
+  width: map.get(var.$width, side-area) - var.$area-padding * 2;
+  padding: var.$area-padding;
+  float: right;
+
+  %side-area-box {
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
   }
 
-  .side-area {
-    width: map.get(var.$width, side-area) - var.$area-padding * 2;
-    padding: var.$area-padding;
-    float: right;
+  .search-area {
+    @extend %side-area-box;
+
+    margin-bottom: 20px;
   }
+
+  .category-area {
+    @extend %side-area-box;
+  }
+}
+
+.category-list li {
+  @include mixins.link-arrow();
 }
 
 .site-footer {
