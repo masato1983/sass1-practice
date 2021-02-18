@@ -1,6 +1,7 @@
 @use 'variables' as var;
 @use 'mixins';
 @use 'sass:map';
+@use 'mediaquery';
 
 * {
   margin: 0;
@@ -80,18 +81,37 @@ li {
   width: map.get(var.$width, contents);
   margin: 0 auto;
   overflow: hidden;
+
+  @include mediaquery.media ('large') {
+    width: 100%;
+  }
 }
 
 .main-area {
   width: map.get(var.$width, contents) - map.get(var.$width, side-area) - var.$area-padding * 2;
   padding: var.$area-padding;
   float: left;
+
+  @include mediaquery.media ('large') {
+    width: calc(100% - #{map.get(var.$width, side-area)} - #{var.$area-padding * 2});
+  }
+
+  @include mediaquery.media ('medium') {
+    width: calc(100% - #{var.$area-padding * 2});
+    font: none;
+  }
 }
+
 
 .side-area {
   width: map.get(var.$width, side-area) - var.$area-padding * 2;
   padding: var.$area-padding;
   float: right;
+
+  @include mediaquery.media ('medium') {
+    width: calc(100% - #{var.$area-padding * 2});
+    font: none;
+  }
 
   %side-area-box {
     padding: 10px;
