@@ -7,6 +7,8 @@ const stylelint = require('gulp-stylelint')
 const postcss = require('gulp-postcss');
 const cssDeclarationSorter = require('css-declaration-sorter');
 const sortMediaQueries = require('postcss-sort-media-queries');
+const postcssColorHexAlpha = require('postcss-color-hex-alpha');
+const postcssColornamesToHex = require('postcss-colornames-to-hex');
 const cleancss = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
@@ -60,6 +62,8 @@ function sassTask() {
     .pipe(gulpif(!isProd, sourcemaps.init()))
     .pipe(sass({outputStyle: 'expanded', fiber: Fiber}))
     .pipe(postcss([
+      postcssColorHexAlpha(),
+      postcssColornamesToHex(), // stylelint for wordpress disallow color name
       autoprefixer(),
       cssDeclarationSorter({order: 'smacss'}),
       sortMediaQueries({
