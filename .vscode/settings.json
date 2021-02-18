@@ -9,6 +9,7 @@
     "gulpfile",
     "gulpif",
     "linthtml",
+    "mediaquery",
     "mixins",
     "puglint",
     "smacss",
