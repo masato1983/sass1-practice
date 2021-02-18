@@ -55,6 +55,8 @@
     "gulp-zip": "^5.0.2",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.6",
+    "postcss-color-hex-alpha": "^7.0.0",
+    "postcss-colornames-to-hex": "^1.0.1",
     "postcss-sort-media-queries": "^3.3.3",
     "pug-lint": "^2.6.0",
     "puglint-stylish": "^1.1.0",
