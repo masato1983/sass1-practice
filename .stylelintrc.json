@@ -6,6 +6,14 @@
   ],
   "ignoreFiles": ["**/*.js"],
   "rules": {
+		"at-rule-empty-line-before": [
+			"always",
+			{
+				"except": ["blockless-after-blockless"],
+				"ignore": ["after-comment"],
+        "ignoreAtRules": ["extend", "include"]
+			}
+		],
     "at-rule-no-unknown": null,
     "scss/at-rule-no-unknown": true,
     "scss/at-rule-conditional-no-parentheses": true,
@@ -13,7 +21,7 @@
     "scss/at-else-closing-brace-space-after": "always-intermediate",
     "scss/at-else-if-parentheses-space-before": "always",
     "scss/at-else-empty-line-before": "never",
-    "scss/at-extend-no-missing-placeholder": true,
+    "scss/at-extend-no-missing-placeholder": null,
     "scss/at-function-named-arguments": "never",
     "scss/at-function-parentheses-space-before": "never",
     "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
@@ -57,12 +65,7 @@
     "scss/double-slash-comment-whitespace-inside": "always",
     "scss/double-slash-comment-inline": "never",
     "scss/comment-no-empty": true,
-    "scss/declaration-nested-properties": [
-      "always",
-      {
-        "except": ["only-of-namespace"]
-      }
-    ],
+    "scss/declaration-nested-properties": null,
     "scss/declaration-nested-properties-no-divided-groups": true,
     "scss/dimension-no-non-numeric-values": true,
     "scss/function-color-relative": true,
@@ -81,7 +84,8 @@
     "declaration-property-unit-allowed-list": {
       "line-height": []
     },
-    "order/properties-alphabetical-order": null,
-    "value-no-vendor-prefix": null
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "order/properties-alphabetical-order": null
   }
 }
