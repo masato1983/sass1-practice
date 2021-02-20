@@ -14,5 +14,20 @@
     "puglint",
     "smacss",
     "stylelint"
-  ]
+  ],
+  "cSpell.ignorePaths": [
+    ".vscode/settings.json",
+    "dist",
+    "node_modules",
+    ".browserslistrc",
+    ".gitignore",
+    ".linthtmlrc.json",
+    ".pug-lintrc.json",
+    ".stylelintrc.json",
+    "gulpfile.js",
+    "package-lock.json",
+    "package.json",
+    "README.md",
+    "rev-manifest.json",
+  ],
 }
